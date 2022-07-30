@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import heroImgContact from 'assets/hero-img-contact.jpg'
+import heroImgContact from '~/assets/hero-img-contact.jpg'
 export default {
   layout: 'default',
   data() {

@@ -133,7 +133,7 @@
 </template>
 
 <script>
-import blackImg from 'assets/Black.jpg'
+import blackImg from '~/assets/Black.jpg'
 export default {
   layout: 'default',
   data() {
