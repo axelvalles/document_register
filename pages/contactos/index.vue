@@ -1,17 +1,7 @@
 <template>
   <div>
-    <div
-      class="p-5 bg-image d-flex align-items-center"
-      :style="{
-        backgroundImage: `url(${heroImgContact})`,
-        height: '400px',
-        marginTop: '58px',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }"
-    >
-      <div>
+    <div class="bg-image d-flex align-items-center hero__container">
+      <div class="hero__inside pt-5">
         <h1 class="mb-3 text-white">Tienes algunas duda? Contactanos !!</h1>
         <h4 class="mb-3 text-white">Nos alegrara poder ayudarte !</h4>
       </div>
@@ -41,3 +31,30 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.hero__container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.hero__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(~/assets/hero-img-contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+
+  filter: blur(2px) saturate(100%) brightness(40%);
+}
+
+.hero__inside {
+  position: relative;
+}
+</style>

@@ -3,7 +3,7 @@
     <!-- Slide -->
     <div
 class="p-5 text-center bg-image" :style="{
-      backgroundImage: `url(${carBlackImg1})`,
+      backgroundImage: `url(${heroLandingImg})`,
       height: '400px',
       marginTop: '58px',
       backgroundSize: 'cover',
@@ -59,7 +59,7 @@ class="p-5 text-center bg-image" :style="{
       <div class="row">
         <div class="col-12 col-md-6 col-lg-4 mb-4">
           <div class="card bg-dark text-white border-0">
-            <img class="card-img" src="~/assets/car_black_img_2.jpg" alt="Card image" />
+            <img class="card-img" src="~/assets/car_red_img_1.jpg" alt="Card image" />
             <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.6)">
               <h5 class="card-title">Permisos temporales</h5>
               <p class="card-text">
@@ -72,7 +72,7 @@ class="p-5 text-center bg-image" :style="{
         </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4 float-md-start">
           <div class="card bg-dark text-white border-0">
-            <img class="card-img" src="~/assets/car_black_img_3.jpg" alt="Card image" />
+            <img class="card-img" src="~/assets/car_black_img_1.jpg" alt="Card image" />
             <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.6)">
               <h5 class="card-title">Titulos</h5>
               <p class="card-text">
@@ -116,12 +116,12 @@ class="p-5 text-center bg-image" :style="{
 </template>
 
 <script>
-import carBlackImg1 from '~/assets/car_black_img_1.jpg'
+import heroLandingImg from '~/assets/hero_landing.jpg'
 export default {
   layout: 'default',
   data() {
     return {
-      carBlackImg1,
+      heroLandingImg,
     }
   },
 }
