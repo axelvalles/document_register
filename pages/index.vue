@@ -2,16 +2,14 @@
   <div>
     <!-- Slide -->
     <div
-      class="p-5 text-center bg-image"
-      :style="{
-        backgroundImage: `url(${blackImg})`,
-        height: '400px',
-        marginTop: '58px',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }"
-    >
+class="p-5 text-center bg-image" :style="{
+      backgroundImage: `url(${carBlackImg1})`,
+      height: '400px',
+      marginTop: '58px',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    }">
       <div>
         <div class="d-flex justify-content-center">
           <div>
@@ -61,56 +59,41 @@
       <div class="row">
         <div class="col-12 col-md-6 col-lg-4 mb-4">
           <div class="card bg-dark text-white border-0">
-            <img class="card-img" src="~/assets/black2.jpg" alt="Card image" />
-            <div
-              class="card-img-overlay"
-              style="background-color: rgba(0, 0, 0, 0.6)"
-            >
+            <img class="card-img" src="~/assets/car_black_img_2.jpg" alt="Card image" />
+            <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.6)">
               <h5 class="card-title">Permisos temporales</h5>
               <p class="card-text">
                 Obten aqui tu permiso temporal por dos meses
               </p>
 
-              <nuxt-link to="/permisos" class="btn btn-primary"
-                >Permisos</nuxt-link
-              >
+              <nuxt-link to="/permisos" class="btn btn-primary">Permisos</nuxt-link>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4 float-md-start">
           <div class="card bg-dark text-white border-0">
-            <img class="card-img" src="~/assets/Black3.jpg" alt="Card image" />
-            <div
-              class="card-img-overlay"
-              style="background-color: rgba(0, 0, 0, 0.6)"
-            >
+            <img class="card-img" src="~/assets/car_black_img_3.jpg" alt="Card image" />
+            <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.6)">
               <h5 class="card-title">Titulos</h5>
               <p class="card-text">
                 Necesitas un Titulo ? , no busque mas aqui podemos brindartelo!
               </p>
 
-              <nuxt-link to="/titulos" class="btn btn-primary"
-                >Titulos</nuxt-link
-              >
+              <nuxt-link to="/titulos" class="btn btn-primary">Titulos</nuxt-link>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4">
           <div class="card bg-dark text-white border-0">
-            <img class="card-img" src="~/assets/White.jpg" alt="Card image" />
-            <div
-              class="card-img-overlay"
-              style="background-color: rgba(0, 0, 0, 0.6)"
-            >
+            <img class="card-img" src="~/assets/car_white_img_1.jpg" alt="Card image" />
+            <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.6)">
               <h5 class="card-title">Seguros</h5>
               <p class="card-text">
                 Quieres obtener un seguro para tu vehiculo ? aqui podemos
                 ayudarte!!
               </p>
 
-              <nuxt-link to="/seguros" class="btn btn-primary"
-                >Seguros</nuxt-link
-              >
+              <nuxt-link to="/seguros" class="btn btn-primary">Seguros</nuxt-link>
             </div>
           </div>
         </div>
@@ -133,12 +116,12 @@
 </template>
 
 <script>
-import blackImg from '~/assets/Black.jpg'
+import carBlackImg1 from '~/assets/car_black_img_1.jpg'
 export default {
   layout: 'default',
   data() {
     return {
-      blackImg,
+      carBlackImg1,
     }
   },
 }
