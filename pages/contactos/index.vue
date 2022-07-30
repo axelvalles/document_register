@@ -49,7 +49,7 @@ export default {
   background-image: url(~/assets/hero-img-contact.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center right;
+  background-position: center center;
 
   filter: blur(2px) saturate(100%) brightness(40%);
 }

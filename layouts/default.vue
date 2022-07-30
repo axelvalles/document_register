@@ -1,6 +1,5 @@
 <template>
   <div>
-    <notifications width="450px" position="bottom right" />
     <app-header />
     <Nuxt />
     <app-footer />
