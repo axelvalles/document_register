@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bg-image d-flex align-items-center hero__container">
-      <div class="hero__inside pt-5">
+      <div class="hero__inside pt-5 px-5">
         <h1 class="mb-3 text-white">Tienes algunas duda? Contactanos !!</h1>
         <h4 class="mb-3 text-white">Nos alegrara poder ayudarte !</h4>
       </div>
