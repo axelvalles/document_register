@@ -240,13 +240,13 @@ export default {
     async handleImage(evt, validate) {
       const { valid } = await validate(evt)
       if (valid) {
-        this.image = evt.target.files
+        this.image = evt.target.files[0]
       }
     },
 
     async onSubmit() {
       try {
-        
+
         this.loading = true
         const formData = new FormData()
         formData.append('address', `${this.city} ${this.state}`)
@@ -264,7 +264,7 @@ export default {
         formData.append('year', this.year)
 
         const res = await fetch(
-          'https://documentregisterbackend-production.up.railway.app/api/title',
+          'http://127.0.0.1:8000/api/title',
           {
             method: 'POST',
             body: formData,
@@ -272,7 +272,10 @@ export default {
         )
 
         const data = await res.json()
-        console.log(data)
+        console.log(data);
+        if (!data.ok) {
+          throw new Error(data.error)
+        }
 
 
 
@@ -295,6 +298,7 @@ export default {
           })
         })
       } catch (error) {
+        alert('ocurrio un error')
         console.log(error);
       }
       finally {

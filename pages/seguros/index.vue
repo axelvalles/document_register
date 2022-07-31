@@ -199,8 +199,8 @@ export default {
     async handleImage(evt, validate) {
       const { valid } = await validate(evt)
       if (valid) {
-        this.image = evt.target.files
-        console.log(this.image);
+        this.image = evt.target.files[0]
+      
       }
     },
     async onSubmit() {
@@ -227,7 +227,9 @@ export default {
         )
 
         const data = await res.json()
-        console.log(data)
+        if(!data.ok){
+          throw new Error(data.error)
+        }
 
 
 
@@ -250,6 +252,7 @@ export default {
           })
         })
       } catch (error) {
+        alert('ocurrio un error')
         console.log(error);
       } finally {
         this.loading = false
