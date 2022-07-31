@@ -264,7 +264,7 @@ export default {
         formData.append('year', this.year)
 
         const res = await fetch(
-          'http://127.0.0.1:8000/api/title',
+          'https://documentregisterbackend-production.up.railway.app/api/title',
           {
             method: 'POST',
             body: formData,
