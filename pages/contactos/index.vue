@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <div class="bg-image d-flex align-items-center hero__container">
       <div class="hero__inside pt-5 px-5">
         <h1 class="mb-3 text-white">Tienes algunas duda? Contactanos !!</h1>
@@ -17,7 +17,7 @@
         <p><i class="fas fa-phone me-3"></i> +1 (512) 952-6557</p>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -27,6 +27,19 @@ export default {
   data() {
     return {
       heroImgContact,
+    }
+  },
+  head() {
+    return {
+      title: "Contáctanos | TemporaryEngine",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Aquí podemos ayudarte a la titulación de tu vehículo, a su vez te brindaremos la información necesaria a la hora de realizar la transacción del mismo, con total seguridad'
+        },
+      ],
+
     }
   },
 }

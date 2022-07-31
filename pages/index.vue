@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <!-- Slide -->
     <div
 class="p-5 text-center bg-image" :style="{
@@ -112,7 +112,7 @@ class="p-5 text-center bg-image" :style="{
         momento.
       </p>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -124,5 +124,25 @@ export default {
       heroLandingImg,
     }
   },
+  head() {
+    return {
+      title: "Inicio | TemporaryEngine",
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: "author", content: "Temporary Engine Team" },
+        {
+          hid: 'description',
+          name: 'description',
+          content: '¡Conduce con seguridad, te brindamos nuestro servicio de seguros vehicular, permisos temporales, titulación para tu vehículo y asesoramiento, todo esto a tu alcance!'
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'permisos temporales de vehiculos, permisos temporales de autos a mexico, permisos temporales para vehiculos americanos, permisos temporales, permisos temporales para carros americanos, placas temporales, placas temporales cerca de mi, placas temporales texas, placas temporales near me, placas y titulos'
+        }
+      ],
+    }
+  }
 }
 </script>
