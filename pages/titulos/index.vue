@@ -180,7 +180,7 @@ id="formFile" class="form-control" :class="{ 'border-danger shadow-none': errors
                 </ValidationProvider>
               </div>
 
-              <button type="button" class="btn btn-primary mt-5" :disabled="invalid || loading">
+              <button type="submit" class="btn btn-primary mt-5" :disabled="invalid || loading">
                 {{ loading ? 'Procesando...' : 'Enviar' }}
               </button>
             </div>
@@ -245,52 +245,62 @@ export default {
     },
 
     async onSubmit() {
-      this.loading = true
-      const formData = new FormData()
-      formData.append('address', `${this.city} ${this.state}`)
-      formData.append('fullName', `${this.firtsName} ${this.secondName}`)
-      formData.append('email', this.email)
-      formData.append('phone', this.number)
-      formData.append('postCode', this.zip)
-      formData.append('color', this.color)
-      formData.append('vin', this.vin)
-      formData.append('model', this.model)
-      formData.append('bodyStyle', this.bodyStyle)
-      formData.append('fuelType', this.fuel) //
-      formData.append('image', this.image)
-      formData.append('isNew', this.isnew)
+      try {
+        
+        this.loading = true
+        const formData = new FormData()
+        formData.append('address', `${this.city} ${this.state}`)
+        formData.append('fullName', `${this.firtsName} ${this.secondName}`)
+        formData.append('email', this.email)
+        formData.append('phone', this.number)
+        formData.append('postCode', this.zip)
+        formData.append('color', this.color)
+        formData.append('vin', this.vin)
+        formData.append('model', this.model)
+        formData.append('bodyStyle', this.bodyStyle)
+        formData.append('fuelType', this.fuel) //
+        formData.append('prevTitleImg', this.image)
+        formData.append('isNew', this.isnew)
+        formData.append('year', this.year)
 
-      const res = await fetch(
-        'https://documentregisterbackend-production.up.railway.app/api/title',
-        {
-          method: 'POST',
-          body: formData,
-        }
-      )
+        const res = await fetch(
+          'https://documentregisterbackend-production.up.railway.app/api/title',
+          {
+            method: 'POST',
+            body: formData,
+          }
+        )
 
-      const data = await res.json()
-      console.log(data)
+        const data = await res.json()
+        console.log(data)
 
-      this.loading = false
 
-      this.$nextTick(() => {
-        this.$refs.form.reset()
 
-        this.$swal({
-          toast: true,
-          title: 'Proceso exitoso',
-          text: 'Tus datos se han procesado con exito, revisa tu correo electronico para mas informacion',
-          icon: 'success',
-          position: 'bottom-end',
-          showConfirmButton: false,
-          timer: 6000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.addEventListener('mouseenter', this.$swal.stopTimer)
-            toast.addEventListener('mouseleave', this.$swal.resumeTimer)
-          },
+        this.$nextTick(() => {
+          this.$refs.form.reset()
+
+          this.$swal({
+            toast: true,
+            title: 'Proceso exitoso',
+            text: 'Tus datos se han procesado con exito, revisa tu correo electronico para mas informacion',
+            icon: 'success',
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 6000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', this.$swal.stopTimer)
+              toast.addEventListener('mouseleave', this.$swal.resumeTimer)
+            },
+          })
         })
-      })
+      } catch (error) {
+        console.log(error);
+      }
+      finally {
+        this.loading = false
+      }
+
     },
   },
 }
