@@ -2,11 +2,11 @@
   <main>
     <div class="bg-image d-flex align-items-center hero__container">
       <div class="hero__inside pt-5 px-5">
-        <h1 class="mb-3 text-white text-md-left text-center">
-          ¿Tienes algunas duda? Contactanos
+        <h1 class="display-4 mb-4 text-white text-md-left text-center">
+          ¿Tienes algunas duda? ¡Contactanos!
         </h1>
         <h4 class="mb-3 text-white text-md-left text-center">
-          Nos alegrara poder ayudarte !
+          ¡Nos alegrara poder ayudarte!
         </h4>
       </div>
     </div>
