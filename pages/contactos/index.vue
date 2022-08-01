@@ -2,8 +2,12 @@
   <main>
     <div class="bg-image d-flex align-items-center hero__container">
       <div class="hero__inside pt-5 px-5">
-        <h1 class="mb-3 text-white">Tienes algunas duda? Contactanos !!</h1>
-        <h4 class="mb-3 text-white">Nos alegrara poder ayudarte !</h4>
+        <h1 class="display-4 mb-4 text-white text-md-left text-center">
+          ¿Tienes algunas duda? ¡Contactanos!
+        </h1>
+        <h4 class="mb-3 text-white text-md-left text-center">
+          ¡Nos alegrara poder ayudarte!
+        </h4>
       </div>
     </div>
     <hr />
@@ -31,15 +35,15 @@ export default {
   },
   head() {
     return {
-      title: "Contáctanos | TemporaryEngine",
+      title: 'Contáctanos | TemporaryEngine',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Aquí podemos ayudarte a la titulación de tu vehículo, a su vez te brindaremos la información necesaria a la hora de realizar la transacción del mismo, con total seguridad'
+          content:
+            'Aquí podemos ayudarte a la titulación de tu vehículo, a su vez te brindaremos la información necesaria a la hora de realizar la transacción del mismo, con total seguridad',
         },
       ],
-
     }
   },
 }
@@ -53,7 +57,7 @@ export default {
 }
 
 .hero__container::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <footer>
     <!-- Footer -->
     <hr />
-    <footer class="text-center text-lg-start bg-light text-muted">
+    <div class="pt-4 text-center text-lg-start bg-light text-muted">
       <!-- Section: Links  -->
       <section class="">
         <div class="container text-center text-md-start mt-5">
@@ -26,7 +26,9 @@
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Products</h6>
               <p>
-                <nuxt-link to="/permisos" class="text-reset">Permisos</nuxt-link>
+                <nuxt-link to="/permisos" class="text-reset"
+                  >Permisos</nuxt-link
+                >
               </p>
               <p>
                 <nuxt-link to="/seguros" class="text-reset">seguros</nuxt-link>
@@ -56,15 +58,23 @@
       <!-- Section: Links  -->
 
       <!-- Copyright -->
-      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
-        <p>© 2021 Copyright:
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        <p>
+          © 2021 Copyright:
           <span class="fw-bold">temporaryengine.com</span>
         </p>
         <hr />
-        <nuxt-link to="/atribuciones" class="nav-link text-primary text-decoration-underline">Atribuciones</nuxt-link>
+        <nuxt-link
+          to="/atribuciones"
+          class="nav-link text-primary text-decoration-underline"
+          >Atribuciones</nuxt-link
+        >
       </div>
       <!-- Copyright -->
-    </footer>
+    </div>
     <!-- Footer -->
-  </div>
+  </footer>
 </template>
