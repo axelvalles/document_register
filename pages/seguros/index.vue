@@ -8,50 +8,85 @@
     <hr />
     <div class="container">
       <ValidationObserver v-slot="{ invalid }">
-        <form ref="form" @submit.prevent="onSubmit">
+        <form ref="form" class="card py-4 p-3" @submit.prevent="onSubmit">
           <div class="row justify-content-center">
             <h1 class="d-flex justify-content-center">
               Informacion de Contacto
             </h1>
             <div class="col-12 col-md-10 col-lg-6">
               <div class="row g-3">
-                <label for="Name" class="form-label mt-5">Nombre del solicitante</label>
+                <label for="Name" class="form-label mt-5"
+                  >Nombre del solicitante</label
+                >
                 <div class="col">
-                  <ValidationProvider v-slot="{ errors }" rules="required|alpha" name="firtsName">
+                  <ValidationProvider
+                    v-slot="{ errors }"
+                    rules="required|alpha"
+                    name="firtsName"
+                  >
                     <input
-v-model="firtsName" type="text" class="form-control mb-2"
-                      :class="{ 'border-danger shadow-none': errors[0] }" placeholder="Nombre"
-                      aria-label="First name" />
+                      v-model="firtsName"
+                      type="text"
+                      class="form-control mb-2"
+                      :class="{ 'border-danger shadow-none': errors[0] }"
+                      placeholder="Nombre"
+                      aria-label="First name"
+                    />
                     <span class="text-danger"> {{ errors[0] }} </span>
                   </ValidationProvider>
                 </div>
                 <div class="col">
-                  <ValidationProvider v-slot="{ errors }" rules="required|alpha" name="secondName">
+                  <ValidationProvider
+                    v-slot="{ errors }"
+                    rules="required|alpha"
+                    name="secondName"
+                  >
                     <input
-v-model="secondName" type="text" class="form-control mb-2"
-                      :class="{ 'border-danger shadow-none': errors[0] }" placeholder="Apellido"
-                      aria-label="Last name" />
+                      v-model="secondName"
+                      type="text"
+                      class="form-control mb-2"
+                      :class="{ 'border-danger shadow-none': errors[0] }"
+                      placeholder="Apellido"
+                      aria-label="Last name"
+                    />
                     <span class="text-danger"> {{ errors[0] }} </span>
                   </ValidationProvider>
                 </div>
               </div>
               <div class="form-group">
-                <label for="Email" class="form-label mt-4">Numero de telefono</label>
-                <ValidationProvider v-slot="{ errors }" rules="required|numeric">
+                <label for="Email" class="form-label mt-4"
+                  >Numero de telefono</label
+                >
+                <ValidationProvider
+                  v-slot="{ errors }"
+                  rules="required|numeric"
+                >
                   <input
-id="Number" v-model="number" type="text" class="form-control mb-2"
-                    :class="{ 'border-danger shadow-none': errors[0] }" aria-describedby="emailHelp"
-                    placeholder="+1 012-345-6789" />
+                    id="Number"
+                    v-model="number"
+                    type="text"
+                    class="form-control mb-2"
+                    :class="{ 'border-danger shadow-none': errors[0] }"
+                    aria-describedby="emailHelp"
+                    placeholder="+1 012-345-6789"
+                  />
                   <span class="text-danger"> {{ errors[0] }} </span>
                 </ValidationProvider>
               </div>
               <div class="form-group">
-                <label for="Email" class="form-label mt-4">Correo electronico</label>
+                <label for="Email" class="form-label mt-4"
+                  >Correo electronico</label
+                >
                 <ValidationProvider v-slot="{ errors }" rules="required|email">
                   <input
-id="Email" v-model="email" type="email" class="form-control mb-2"
-                    :class="{ 'border-danger shadow-none': errors[0] }" aria-describedby="emailHelp"
-                    placeholder="Correo@ejemplo.com" />
+                    id="Email"
+                    v-model="email"
+                    type="email"
+                    class="form-control mb-2"
+                    :class="{ 'border-danger shadow-none': errors[0] }"
+                    aria-describedby="emailHelp"
+                    placeholder="Correo@ejemplo.com"
+                  />
                   <span class="text-danger"> {{ errors[0] }}</span>
                 </ValidationProvider>
               </div>
@@ -67,82 +102,148 @@ id="Email" v-model="email" type="email" class="form-control mb-2"
             <div class="col-12 col-md-10 col-lg-6">
               <div class="form-group">
                 <label for="Email" class="form-label mt-4">Vin</label>
-                <ValidationProvider v-slot="{ errors }" rules="required|alpha_num|length:17">
+                <ValidationProvider
+                  v-slot="{ errors }"
+                  rules="required|alpha_num|length:17"
+                >
                   <input
-id="Vin" v-model="vin" type="text" class="form-control mb-2"
-                    :class="{ 'border-danger shadow-none': errors[0] }" aria-describedby="emailHelp"
-                    placeholder="Vin" />
+                    id="Vin"
+                    v-model="vin"
+                    type="text"
+                    class="form-control mb-2"
+                    :class="{ 'border-danger shadow-none': errors[0] }"
+                    aria-describedby="emailHelp"
+                    placeholder="Vin"
+                  />
                   <span class="text-danger">{{ errors[0] }}</span>
                 </ValidationProvider>
               </div>
               <div class="form-group">
-                <label for="Color" class="form-label mt-4">Color del vehiculo</label>
+                <label for="Color" class="form-label mt-4"
+                  >Color del vehiculo</label
+                >
                 <ValidationProvider v-slot="{ errors }" rules="required|alpha">
                   <input
-id="Color" v-model="color" type="text" class="form-control mb-2"
-                    :class="{ 'border-danger shadow-none': errors[0] }" aria-describedby="emailHelp"
-                    placeholder="Color" />
+                    id="Color"
+                    v-model="color"
+                    type="text"
+                    class="form-control mb-2"
+                    :class="{ 'border-danger shadow-none': errors[0] }"
+                    aria-describedby="emailHelp"
+                    placeholder="Color"
+                  />
                   <span class="text-danger">{{ errors[0] }}</span>
                 </ValidationProvider>
               </div>
               <div class="form-group">
-                <label for="model" class="form-label mt-4">Marca y modelo del vehiculo</label>
+                <label for="model" class="form-label mt-4"
+                  >Marca y modelo del vehiculo</label
+                >
                 <ValidationProvider v-slot="{ errors }" rules="required|alpha">
                   <input
-id="Marca-y-modelo" v-model="model" type="text" class="form-control mb-2"
-                    :class="{ 'border-danger shadow-none': errors[0] }" aria-describedby="emailHelp"
-                    placeholder="Marca y modelo" />
+                    id="Marca-y-modelo"
+                    v-model="model"
+                    type="text"
+                    class="form-control mb-2"
+                    :class="{ 'border-danger shadow-none': errors[0] }"
+                    aria-describedby="emailHelp"
+                    placeholder="Marca y modelo"
+                  />
                   <span class="text-danger">{{ errors[0] }}</span>
                 </ValidationProvider>
               </div>
 
               <div class="form-group">
                 <label for="Email" class="form-label mt-4">Body Style</label>
-                <ValidationProvider v-slot="{ errors }" rules="required|alpha_num">
+                <ValidationProvider
+                  v-slot="{ errors }"
+                  rules="required|alpha_num"
+                >
                   <input
-id="style" v-model="bodyStyle" type="text" class="form-control"
-                    :class="{ 'border-danger shadow-none': errors[0] }" aria-describedby="bodyStyle"
-                    placeholder="Body Style" />
+                    id="style"
+                    v-model="bodyStyle"
+                    type="text"
+                    class="form-control"
+                    :class="{ 'border-danger shadow-none': errors[0] }"
+                    aria-describedby="bodyStyle"
+                    placeholder="Body Style"
+                  />
                   <span class="text-danger">{{ errors[0] }}</span>
                 </ValidationProvider>
               </div>
               <div class="row g-3 mt-4">
-                <label for="Email" class="form-label mb-0">Dirección completa con código postal (ZIP)</label>
+                <label for="Email" class="form-label mb-0"
+                  >Dirección completa con código postal (ZIP)</label
+                >
                 <div class="col-sm-7">
-                  <ValidationProvider v-slot="{ errors }" rules="required|alpha_num">
+                  <ValidationProvider
+                    v-slot="{ errors }"
+                    rules="required|alpha_num"
+                  >
                     <input
-v-model="city" type="text" class="form-control mb-2"
-                      :class="{ 'border-danger shadow-none': errors[0] }" placeholder="City" aria-label="City" />
+                      v-model="city"
+                      type="text"
+                      class="form-control mb-2"
+                      :class="{ 'border-danger shadow-none': errors[0] }"
+                      placeholder="City"
+                      aria-label="City"
+                    />
                     <span class="text-danger">{{ errors[0] }}</span>
                   </ValidationProvider>
                 </div>
                 <div class="col-sm">
-                  <ValidationProvider v-slot="{ errors }" rules="required|alpha_num">
+                  <ValidationProvider
+                    v-slot="{ errors }"
+                    rules="required|alpha_num"
+                  >
                     <input
-v-model="state" type="text" class="form-control mb-2"
-                      :class="{ 'border-danger shadow-none': errors[0] }" placeholder="State" aria-label="State" />
+                      v-model="state"
+                      type="text"
+                      class="form-control mb-2"
+                      :class="{ 'border-danger shadow-none': errors[0] }"
+                      placeholder="State"
+                      aria-label="State"
+                    />
                     <span class="text-danger">{{ errors[0] }}</span>
                   </ValidationProvider>
                 </div>
                 <div class="col-sm">
-                  <ValidationProvider v-slot="{ errors }" rules="required|alpha_num">
+                  <ValidationProvider
+                    v-slot="{ errors }"
+                    rules="required|alpha_num"
+                  >
                     <input
-v-model="zip" type="text" class="form-control mb-2"
-                      :class="{ 'border-danger shadow-none': errors[0] }" placeholder="Zip" aria-label="Zip" />
+                      v-model="zip"
+                      type="text"
+                      class="form-control mb-2"
+                      :class="{ 'border-danger shadow-none': errors[0] }"
+                      placeholder="Zip"
+                      aria-label="Zip"
+                    />
                     <span class="text-danger">{{ errors[0] }}</span>
                   </ValidationProvider>
                 </div>
               </div>
               <div class="form-group">
-                <label for="formFile" class="form-label mt-4">Foto del seguro anterior</label>
+                <label for="formFile" class="form-label mt-4"
+                  >Foto del seguro anterior</label
+                >
                 <ValidationProvider v-slot="{ errors, validate }" rules="image">
                   <input
-id="formFile" class="form-control" :class="{ 'border-danger shadow-none': errors[0] }"
-                    type="file" @change="(e) => handleImage(e, validate)" />
+                    id="formFile"
+                    class="form-control"
+                    :class="{ 'border-danger shadow-none': errors[0] }"
+                    type="file"
+                    @change="(e) => handleImage(e, validate)"
+                  />
                   <span class="text-danger">{{ errors[0] }}</span>
                 </ValidationProvider>
               </div>
-              <button type="submit" class="btn btn-primary mt-5" :disabled="invalid || loading">
+              <button
+                type="submit"
+                class="btn btn-primary mt-5"
+                :disabled="invalid || loading"
+              >
                 {{ loading ? 'Procesando...' : 'Enviar' }}
               </button>
             </div>
@@ -180,18 +281,19 @@ export default {
   },
   head() {
     return {
-      title: "Seguros | TemporaryEngine",
+      title: 'Seguros | TemporaryEngine',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: '¡Conduce con seguridad, te brindamos nuestro servicio de seguros vehicular y asesoramiento necesario del mismo, todo esto a tu alcance!'
+          content:
+            '¡Conduce con seguridad, te brindamos nuestro servicio de seguros vehicular y asesoramiento necesario del mismo, todo esto a tu alcance!',
         },
         {
           hid: 'keywords',
           name: 'keywords',
-          content: 'seguros de autos, seguros de carros'
-        }
+          content: 'seguros de autos, seguros de carros',
+        },
       ],
     }
   },
@@ -200,7 +302,6 @@ export default {
       const { valid } = await validate(evt)
       if (valid) {
         this.image = evt.target.files[0]
-      
       }
     },
     async onSubmit() {
@@ -227,11 +328,9 @@ export default {
         )
 
         const data = await res.json()
-        if(!data.ok){
+        if (!data.ok) {
           throw new Error(data.error)
         }
-
-
 
         this.$nextTick(() => {
           this.$refs.form.reset()
@@ -253,13 +352,11 @@ export default {
         })
       } catch (error) {
         alert('ocurrio un error')
-        console.log(error);
+        console.log(error)
       } finally {
         this.loading = false
       }
-
-
     },
-  }
+  },
 }
 </script>

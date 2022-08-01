@@ -12,7 +12,7 @@
     <hr />
     <div class="container">
       <ValidationObserver v-slot="{ invalid }">
-        <form class="card py-4 p-3" ref="form" @submit.prevent="onSubmit">
+        <form ref="form" class="card py-4 p-3" @submit.prevent="onSubmit">
           <div class="row justify-content-center">
             <h1 class="d-flex justify-content-center">
               Informacion de Contacto
