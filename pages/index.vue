@@ -23,7 +23,7 @@
       </div>
     </div>
     <hr />
-    <div class="container mt-5 mb-5 ms-4">
+    <div class="container my-5">
       <h2>¿Que son los Permisos temporales?</h2>
       <p>
         Válido por dos meses, el permiso temporario expedido por el DMV le
@@ -59,7 +59,7 @@
     <div class="container d-flex justify-content-center">
       <div class="row">
         <div class="col-12 col-md-6 col-lg-4 mb-4">
-          <div class="card bg-dark text-white border-0">
+          <div class="card bg-dark text-white border-0 shadow-lg">
             <img
               class="card-img"
               src="~/assets/car_red_img_1.jpg"
@@ -81,7 +81,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4 float-md-start">
-          <div class="card bg-dark text-white border-0">
+          <div class="card bg-dark text-white border-0 shadow-lg">
             <img
               class="card-img"
               src="~/assets/car_black_img_1.jpg"
@@ -103,7 +103,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4">
-          <div class="card bg-dark text-white border-0">
+          <div class="card bg-dark text-white border-0 shadow-lg">
             <img
               class="card-img"
               src="~/assets/car_white_img_1.jpg"
@@ -127,7 +127,7 @@
         </div>
       </div>
     </div>
-    <div class="container mt-5 mb-5 ms-4">
+    <div class="container my-5">
       <h2>Un poco mas de informacion</h2>
       <p>
         Estamos al tanto de el problema de estafas y demas , hay que tomar en
